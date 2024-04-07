@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABtesting Isabelle Meza</title>
+    <!-- import CSS styles -->
+    <link rel="stylesheet" href="styles.css" /> 
+  </head>
+
+  <body>
+    <div class="top-bar">
+        <h1>Isabelle Meza</h1>
+    </div>
+    <div id="intro" class="section">
+        <h1>Project: Development</h1>
+    </div>
+    <div id="line"></div>
+    <div id="overview project" class="section">
+        <h1> Overview </h1>
+          <p class = "sectionText">blah blah blah </p>
+    </div>
+    
+    <div id="line"></div>
+
+    <div id="Data Collection" class="section">
+      <h1>Data Colletion</h1>
+      <p class="sectionText">This assignment was done in a class, and so the data I collected was from a lab we all participated in. We first all ‘tested’ the A version of the interface. We did this by being tasked with scheduling an appointment on a specific day, with a certain doctor. After we all did this, we were able to make changes to the website ended up being version B. Then, went around and tested each other's designs. It was the same people who tested version A that tested version B. 
+      </p>
+      <div class = "subunit">
+        <h2>Design Before/After</h2>
+        <div class="pictures">
+            <img class="image" alt="Design of Version A Website" src="./photos/lab_original_design.png">
+          </div>
+      </div>
+      <div class="subunit">
+        <h2>Data Tables A and B</h2>
+        <div class="pictures">
+            <img class="image" alt="Data Table B" src="./photos/B_TestingData.png">
+        </div>
+
+      </div>
+    </div>
+
+    <div id="line"></div>
+
+    <div id="Analysis" class="section">
+      <h1>Analysis</h1>
+      <div id="hypothesis" class="subunit">
+        <h2>Hypothesis</h2>
+        <div>
+          <p class="sectionText">
+            I created hypothesis for the folllowing data points: the misclick rate, the time spent on page, and the time it took for them to first click. 
+          </p>
+          <table class="tablestuff">
+            <tr>
+              <th></th>
+              <th>Misclick</th>
+              <th>Time Spent on Page</th>
+              <th>Time to First Click</th>
+            </tr>
+            <tr>
+              <th>Null Hypothesis</th>
+              <td>The misclick rate is the same for both versions</td>
+              <td>
+                There is no difference between the two versions for the average time spent on the page.
+              </td>
+              <td>
+                The average time to first click is going to be to be the same for both versions. 
+              </td>
+            </tr>
+            <tr>
+              <th>Alternative Hypothesis</th>
+              <td>
+                The misclick rate of version A will be greater than version B's. 
+              </td>
+              <td>
+                The time spent on the page will be longer for version A users than version B. 
+              </td>
+              <td>
+                Version A's time to first click will be longer than version B's. 
+              </td>
+            </tr>
+            <tr>
+              <th>Predictions</th>
+              <td>
+                I predict that I will reject the null hypothesis and the alternative hypothesis 
+                will be true because of the button spacing being too close together, 
+                low contrast between colors, and appointment sections not being clearly distinguished.
+              </td>
+              <td>
+                I predict that the null hypothesis wil be rejected because of the button spacing, 
+                low contrast between colors, and appointment sections not being clearly distinguished. 
+              </td>
+              <td>
+                I predict that the null hypothesis wil be rejected because of the button spacing being too close together, 
+                low contrast between colors, and appointment sections not being clearly distinguished.
+              </td>
+            </tr>
+          </table>
+          <table class="tablestuff">
+            <tr>
+              <th></th>
+              <th>Misclick</th>
+              <th>Time Spent on Page</th>
+              <th>Time to First Click</th>
+            </tr>
+            <tr>
+              <th>Justification for Alternative Hypothesis</th>
+              <td>Because of the low contrast in colors and the spacing being too close between the buttons, I hypothesize
+                that the misclick rate will be higher for version A than version B. User's will have a harder time seeing which
+                button is for a certain purpose which will lead them to click the wrong one.
+              </td>
+              <td>Because of the appointments having no clear distinguishment from each other and the spacing being too close between the buttons, I hypothesize
+                that the time spent on the page will be longer for version A than version B. User's will have a harder time seeing which
+                button is for a certain purpose and if the button is on the right line. This will lead them to take longer to see if what option 
+                they are choosing is correct. 
+              </td>
+              <td>Because of the appointments having no clear distinguishment from each other, the spacing being too close between the buttons, and low contrast in color, I hypothesize
+                that version A's time to first click will be greater than version B. User's will have a harder time seeing which
+                button is for a certain purpose and if the button is on the right line. This will lead them to take longer to see if what option 
+                they are choosing is correct. 
+              </td>
+            </tr>
+          </table>
+
+      </div>
+      </div>
+      <div id="resulting statistical analysis" class="subunit">
+        <h2>Resulting Statistical Analysis</h2>
+        <p class="sectionText">Computation of each metric's approiate statistics</p>
+        <div class="card">
+          <h3>Misclick Rate Metric Statistics</h3>
+          <div class="output">
+            <img class="image" alt="Misclick Rate output data" src="./photos/output_misclickrate.png">
+          </div>
+          <div class="words">
+            <p><b>Description of Test</b>:</p>
+          <p>
+            One-tailed t-test: The onetailed t-test shows if x (experimental) number is greater 
+            or less than y (baseline) number. My alternative hypothesis states that version A greater 
+            misclick rate than version B. Because of my hypothesis, I need to use a test that will be 
+            able to assess whether my x, version B, is bigger or smaller than my y, version A. I’m 
+            using version A as a baseline because it was the design that we were given and I had not changed it.
+          </p>
+          <p><b>P-Value:</b></p>
+          <p>Calculated by: p_value_{A>B} = 1 - p_value_{A&lt;B}</p>
+          <p>P-value = 1-0.9946201867 = 0.0053798133</p>
+          <p></p>
+          <p><b>Statistical Significance:</b></p>
+          <p>0.0053798133 &lt; 0.05</p>
+          <p>
+            the p-value (0.0053798133) is less than the significance level (0.05) therefore, the difference between 
+            version A and version B with respect to the time to first click metric is statistically significant
+          </p>
+          <p><b>Conclusion:</b></p>
+          <p>
+            I reject the null hypothesis. I find statistically significant evidence 
+            that the alternative hypothesis is true. 
+          </p>
+          </div>
+          
+        </div>
+        <div class="card">
+          <h3>Time Spent on Page Metric Statistics</h3>
+          <div class="output">
+            <img class="image" alt="Time on Page output data" src="./photos/output_timeonpage.png">
+          </div>
+          <div class="words">
+            <p><b>Description of Test:</b></p>
+          <p>
+            One-tailed t-test: The onetailed t-test shows if x (experimental) number is greater or less than y (baseline) number. My alternative hypothesis states that version A’s time on the page is greater than version B’s time. Because of my hypothesis, I need to use a test that will be able to assess whether my x, version B, is bigger or smaller than my y, version A. I’m using version A as a baseline because it was the design that we were given and I had not changed it.
+          </p>
+          <p><b>P-Value:</b></p>
+          <p>Calculated by: p_value_{A>B} = 1 - p_value_{A&lt;B}</p>
+          <p>
+            P-value = 1 - 9999585514 = 0.0000414486
+          </p>
+          <p><b>Statistical Significance:</b></p>
+          <p>0.0000414486 &lt; 0.05</p>
+          <p>
+            the p-value (0.0000414486) is less than the significance level (0.05) therefore, the difference between version A and version B with respect to the time to first click metric is statistically significant
+          </p>
+          <p><b>Conclusion:</b></p>
+          <p>
+            I reject the null hypothesis. I find statistically significant evidence that the alternative hypothesis is true. 
+          </p>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Time to First Click Metric Statistics</h3>
+          <div class="output">
+            <img class="image" alt="Time to First Click output data" src="./photos/output_first_click.png">
+          </div>
+          <div class="words">
+            <p><b>Description of Test:</b></p>
+          <p>
+            One-tailed t-test: The onetailed t-test shows if x (experimental) number is greater or less than y (baseline) number. My alternative hypothesis states that version A’s time to first click is greater than version B’s time. Because of my hypothesis, I need to use a test that will be able to assess whether my x, version B, is bigger or smaller than my y, version A. I’m using version A as a baseline because it was the design that we were given and I had not changed it.
+          </p>
+          <p><b>P-Value:</b></p>
+          <p>Calculated by: p_value_{A>B} = 1 - p_value_{A&lt;B}</p>
+          <p>
+            P-value = 1 - 0.9999771573 = 0.0000228427
+          </p>
+          <p><b>Statistical Significance:</b></p>
+          <p>0.0000228427 &lt; 0.05</p>
+          <p>
+            the p-value (0.0000228427) is less than the significance level (0.05) therefore, the difference between version A and version B with respect to the time to first click metric is statistically significant
+          </p>
+          <p><b>Conclusion:</b></p>
+          <p>
+            I reject the null hypothesis. I find statistically significant evidence that the alternative hypothesis is true.
+          </p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <div id="line"></div>
+    
+    <div id="Conclusion" clas="section">
+      <div class="subunit">
+        <h2>Summary Statistics</h2>
+        <div class="card overview">
+        <div>
+          <p><b>Test 1: Misclick Rate</b></p>
+          <p>Avg(A) = 0.2608695652 ≅ 26%</p>
+          <p>Variance(A) = 0.2015810277</p>
+          <p>Avg(B) = 0 ≅ 0%</p>
+          <p>Variance(B) = 0</p>
+        </div>
+        <div >
+          <p><b>Test 2: Time Spent on Page</b></p>
+          <p>Avg(A) = 22324.78261 seconds</p>
+          <p>Variance(A) = 234839182.5</p>
+          <p>Avg(B) = 6917.52381 seconds</p>
+          <p>Variance(B) = 4541282.862</p>
+        </div>
+        <div>
+          <p><b>Test 3: Time to First Click</b></p>
+          <p>Avg(A) = 12217.42857 seconds</p>
+          <p>Variance(A) = 47658542.16</p>
+          <p>Avg(B) = 4407.05 seconds</p>
+          <p>Variance(B) = 2291424.408 
+          </p>
+        </div>
+        <div>
+          <p class="special">
+            Based on all three tests, it is likely that version B is better in terms 
+            of being more effective than version A. We see that on average (with little variance) the time 
+            on the page and time to first click is greater for version A than B. The average of misclicking 
+            is also greater with version A with little variance. I think that this difference exists because 
+            of the way the buttons were designed. They were super close together with contrast issues where 
+            people are more likely to get confused. It seems that users are more effective with the version 
+            B than version A. 
+          </p>
+        </div>
+      </div>
+      <div id="overall thoughts" class="subunit">
+        <h2>Overall thoughts</h2>
+        <div class="subunit sectionText">
+          <p>I feel like the tests I used were useful in showing my hypothesis. I feel like I could have gone even further if I were to use a variety of different tests. (I hope to do so in the future) I believe that the tests I did were useful and informative, however, there is always more information that I could get if I had analyzed the data differently. 
+          </p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div>
+
+    </div>
+  </body>
+
+</html>
